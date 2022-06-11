@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  color: gray;
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+}
+/* contains photo, userInfo and icon(s) */
+.parentDiv {
+  border-bottom: 0.5px solid #ddd;
+  padding: 20px;
+}
+.photoDiv {
+  align-self: center;
+  margin-right: 50px;
+}
+.userInfoDiv {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+}
+.nameDiv {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.detailsDiv {
+  margin: 0 0 15px 25px;
+  line-height: 0.5;
+}
+.expandDiv {
+  margin-left: 25px;
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 0.5;
+}
+/* individual classes */
+.photo {
+  width: 125px;
+  border: 2px solid rgb(168, 166, 166);
+  border-radius: 50%;
+}
+.fullName {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  /* letter-spacing: 0.7px; */
+}
+
+.iconParent {
+  background-color: white;
+  border: none;
+  color: rgb(97, 96, 96);
+  position: relative;
+  align-self: flex-start;
+}
+
+/* #expandableList,
+.iconParent {
+  background-color: white;
+  border: none;
+  color: rgb(97, 96, 96);
+} */
+/* #expandableList:hover {
+  color: black;
+} */
+/* ul li {
+  color: rgb(104, 103, 103);
+} */
