@@ -2,6 +2,7 @@ import React from "react";
 
 const Student = (props) => {
   console.log(props);
+
   const total = props.api_fetch.students.length;
   const gradesList = props.api_fetch.students[0].grades;
   let i = 0;
@@ -12,10 +13,11 @@ const Student = (props) => {
       sum += Number(gradesList[i]);
     }
     let average = sum / gradesList.length;
-    console.log("Grade: " + Math.round(average) + "%");
+    // console.log("Grade: " + Math.round(average) + "%");
     // grades.textContent = "Grade: " + Math.round(average) + "%";
   }
   findAverage(gradesList);
+  
   return (
     <div className="content">
       <div className="container parentDiv">
