@@ -2,17 +2,17 @@ import React from "react";
 
 const searchBars = () => (
   <header>
-    <div class="searchParent">
+    <div className="searchParent">
       <input
-        class="searchBar"
+        className="searchBar"
         type="text"
         placeholder="Search by name..."
       ></input>
     </div>
 
-    <div class="searchParent">
+    <div className="searchParent">
       <input
-        class="searchBar"
+        className="searchBar"
         type="text"
         placeholder="Search by tag..."
       ></input>
