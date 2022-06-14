@@ -1,11 +1,12 @@
-import Student from "./components/Student";
-import "./student.css";
+import React from 'react';
+import Api from "./components/Api";
+import "./modules/student.css";
+import "./modules/searchBar.css";
 
 function App() {
-  const students = [1, 2, 3, 4, 5, 6];
   return (
-    <div className="App">
-        <Student/>   
+    <div>
+        <Api />
     </div>
   );
 }
