@@ -1,54 +1,44 @@
 import React from "react";
+let average;
 
 const Student = (props) => {
-  console.log(props);
+  // console.log(props);
 
-  const total = props.api_fetch.students.length;
-  const gradesList = props.api_fetch.students[0].grades;
-  let i = 0;
-
-  function findAverage(gradesList) {
+  // findAverage
+  function findAverage(grades) {
     let sum = 0;
-    for (i; i < gradesList.length; i++) {
-      sum += Number(gradesList[i]);
+    for (let i = 0; i < grades.length; i++) {
+      sum += Number(grades[i]);
     }
-    let average = sum / gradesList.length;
-    // console.log("Grade: " + Math.round(average) + "%");
-    // grades.textContent = "Grade: " + Math.round(average) + "%";
+    average = sum / grades.length;
+    Math.round(average);
   }
-  findAverage(gradesList);
-  
+  findAverage(props.grades);
+
   return (
     <div className="content">
       <div className="container parentDiv">
         <div className="row">
           <div className="col-sm col-md-1 photoDiv">
-            <img
-              alt=""
-              src={props.api_fetch.students[0].pic}
-              className="photo"
-            ></img>
+            <img alt="" src={props.photo} className="photo"></img>
           </div>
           <div className="col-sm col-md-8 userInfoDiv">
             <div className="nameDiv">
-              <h3 className="fullName">
-                {props.api_fetch.students[0].firstName.toUpperCase()}{" "}
-                {props.api_fetch.students[0].lastName.toUpperCase()}
-              </h3>
+              <h3 className="fullName">{props.name.toUpperCase()}</h3>
             </div>
 
             <div className="detailsDiv">
               <p id="email" className="details">
-                Email: {props.api_fetch.students[0].email}
+                Email: {props.email}
               </p>
               <p id="company" className="details">
-                Company: {props.api_fetch.students[0].company}
+                Company: {props.company}
               </p>
               <p id="skill" className="details">
-                Skill: {props.api_fetch.students[0].skill}
+                Skill: {props.skill}
               </p>
               <p id="grades" className="details">
-                Grade: 93%
+                Grade: {average} %;
               </p>
             </div>
           </div>

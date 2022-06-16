@@ -19,10 +19,23 @@ function App() {
     api_call();
   }, []);
 
+  // console.log(data ? data.students : null);
+
   return (
     <div>
       <SearchBars />
-      {data && <Student api_fetch={data} />}
+      {data &&
+        data.students.map((student) => (
+          <Student
+            key={student.id}
+            photo={student.pic}
+            name={student.firstName + " " + student.lastName}
+            email={student.email}
+            company={student.company}
+            skill={student.skill}
+            grades={student.grades}
+          />
+        ))}
     </div>
   );
 }
