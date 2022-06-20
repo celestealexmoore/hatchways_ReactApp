@@ -31,7 +31,7 @@ Mobile View:
 
 ## Deployed Site
 
-Coming soon to a computer near you!
+Coming soon to a device near you!
 
 ## Features
     - Single-page application built with HTML, CSS and React and JavaScript.
