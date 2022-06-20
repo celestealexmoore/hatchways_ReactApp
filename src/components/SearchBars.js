@@ -1,23 +1,17 @@
-import React from "react";
+const SearchBars = (props) => {
+  return (
+    <header>
+      <div className="searchParent">
+        <input
+          className="searchBar"
+          type="text"
+          placeholder="Search by name..."
+          value={props.searchValue}
+          onChange={(e) => props.setSearchValue(e.target.value)}
+        ></input>
+      </div>
+    </header>
+  );
+};
 
-const searchBars = () => (
-  <header>
-    <div className="searchParent">
-      <input
-        className="searchBar"
-        type="text"
-        placeholder="Search by name..."
-      ></input>
-    </div>
-
-    <div className="searchParent">
-      <input
-        className="searchBar"
-        type="text"
-        placeholder="Search by tag..."
-      ></input>
-    </div>
-  </header>
-);
-
-export default searchBars;
+export default SearchBars;

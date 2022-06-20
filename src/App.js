@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./modules/student.css";
-import "./modules/searchBar.css";
 import Student from "./components/Student";
 import SearchBars from "./components/SearchBars";
+import searchName from "./components/utils/searchName";
 
 function App() {
   const [data, setData] = useState();
+  const [searchValue, setSearchValue] = useState("");
 
   const api_call = async () => {
     const url = "https://api.hatchways.io/assessment/students";
@@ -14,18 +14,31 @@ function App() {
     const response = await request;
     setData(response.data);
   };
-
   useEffect(() => {
     api_call();
   }, []);
 
-  // console.log(data ? data.students : null);
+  let studentArray = [];
+
+  const filteredArray = (data, searchValue) => {
+    if (!searchValue && data) {
+      studentArray = data.students;
+      return;
+    }
+    if (!searchValue && !data) {
+      console.log("no data or array");
+      return;
+    }
+    studentArray = searchName(data.students, searchValue);
+    return;
+  };
+  filteredArray(data, searchValue);
 
   return (
     <div>
-      <SearchBars />
+      <SearchBars searchValue={searchValue} setSearchValue={setSearchValue} />
       {data &&
-        data.students.map((student) => (
+        studentArray.map((student) => (
           <Student
             key={student.id}
             photo={student.pic}
