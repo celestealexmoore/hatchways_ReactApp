@@ -23,14 +23,19 @@
 
 ## Media
 
-Coming soon to a screen near you.
+Full-Width View:
+![Photo 1](./src/photos/fullView.png)
+
+Mobile View:
+![Photo 1](./src/photos/mobileView.png)
 
 ## Deployed Site
 
+Coming soon to a computer near you!
 
 ## Features
     - Single-page application built with HTML, CSS and React and JavaScript.
-    -Bootstrap for mobile-first design elements.
+    - Bootstrap and Bootstrap Icons.
 
 ## Contributors
 
@@ -43,7 +48,7 @@ celestealexmoore@gmail.com.
 
 ## Project Status
 
-In Progress
+Completed
 
 ---
 
