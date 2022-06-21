@@ -23,10 +23,10 @@
 
 ## Media
 
-Full-Width View:
+Full-Width View:  
 ![Photo 1](./src/photos/fullView.png)
 
-Mobile View:
+Mobile View:  
 ![Photo 1](./src/photos/mobileView.png)
 
 ## Deployed Site
