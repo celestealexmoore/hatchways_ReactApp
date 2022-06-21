@@ -25,15 +25,14 @@ const Student = (props) => {
       setTag("");
     }
   };
-
   // findAverage
   findAverage(props.grades);
 
   return (
-    <div className="content">
-      <div className="container parentDiv">
+    <div className="container-fluid content">
+      <div className="container-fluid parentDiv">
         <div className="row">
-          <div className="col-md-1 photoDiv">
+          <div className="d-flex col-md-2 align-items-center justify-content-md-end photoDiv">
             <img alt="" src={props.photo} className="photo"></img>
           </div>
           <div className="col-md-8 userInfoDiv">
@@ -60,9 +59,8 @@ const Student = (props) => {
                 <div className="expandDiv">
                   <ul>
                     {props.grades.map((grade, i) => (
-                      <li>
-                        {" "}
-                        Test {i + 1}: {grade}%
+                      <li key={i + 1}>
+                        Test {i + 1}: {grade}
                       </li>
                     ))}
                   </ul>
@@ -71,7 +69,7 @@ const Student = (props) => {
 
               {tags && tags.map((tag, id) => <Tag key={id} tag={tag} />)}
 
-              <div className="container">
+              <div className="container-fluid">
                 <form onSubmit={handleSubmit} className="row">
                   <input
                     type="text"
@@ -84,7 +82,7 @@ const Student = (props) => {
               </div>
             </div>
           </div>
-          <div className="col iconParent">
+          <div className="d-flex col-md-2 justify-content-md-end iconParent">
             <Toggle showGrades={showGrades} setShowGrades={setShowGrades} />
           </div>
         </div>

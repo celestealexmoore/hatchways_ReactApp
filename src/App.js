@@ -26,7 +26,6 @@ function App() {
       return;
     }
     if (!searchValue && !data) {
-      console.log("no data or array");
       return;
     }
     studentArray = searchName(data.students, searchValue);

@@ -12,9 +12,10 @@ body {
 .searchParent {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
 }
 .searchBar {
-  width: 95%;
+  width: 97%;
   font-size: 16px;
   padding: 10px;
   border: 1px solid white;
@@ -23,16 +24,11 @@ body {
   margin-bottom: 15px;
   z-index: 0;
 }
-.photoDiv {
-  align-self: center;
-  margin-right: 50px;
-}
 .userInfoDiv {
   display: flex;
   flex-flow: column nowrap;
   padding: 0;
   margin: 0;
-  width: 60%;
 }
 .nameDiv {
   margin-left: 10px;
@@ -43,10 +39,9 @@ body {
   line-height: 0.5;
 }
 .expandDiv {
-  margin-left: 25px;
   font-weight: lighter;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.5;
 }
 .expandDiv ul li {
   list-style-type: none;
@@ -63,13 +58,8 @@ body {
   font-weight: 700;
 }
 .iconParent {
-  display: flex;
-  flex-direction: row-reverse;
-  background-color: white;
+  background-color: inherit;
   border: none;
-  color: rgb(97, 96, 96);
-  position: relative;
-  align-self: flex-start;
 }
 /* for tags */
 .textInput {
@@ -78,14 +68,27 @@ body {
   width: fit-content;
   border-radius: 0px !important;
 }
-.newTagDiv {
-  margin-bottom: 20px;
-}
 .newTag {
   background-color: rgb(200, 200, 200);
   color: black;
   width: fit-content;
   padding: 12px;
   border-radius: 2px;
-  margin-left: -12px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+  .parentDiv {
+    justify-content: center;
+  }
+  .photoDiv {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .userInfoDiv {
+    align-items: center;
+  }
+  .iconParent {
+    justify-content: center;
+  }
 }
