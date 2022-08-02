@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hatchways_ReactApp/static/css/main.2b635d61.css",
+    "main.js": "/hatchways_ReactApp/static/js/main.c3fbf7d7.js",
+    "index.html": "/hatchways_ReactApp/index.html",
+    "main.2b635d61.css.map": "/hatchways_ReactApp/static/css/main.2b635d61.css.map",
+    "main.c3fbf7d7.js.map": "/hatchways_ReactApp/static/js/main.c3fbf7d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b635d61.css",
+    "static/js/main.c3fbf7d7.js"
+  ]
+}
