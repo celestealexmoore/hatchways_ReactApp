@@ -31,7 +31,7 @@ Mobile View:
 
 ## Deployed Site
 
-Coming soon to a device near you!
+[Here is the link to the deployed application.](http://celestealexmoore.github.io/hatchways_ReactApp)
 
 ## Features
     - Single-page application built with HTML, CSS and React and JavaScript.
